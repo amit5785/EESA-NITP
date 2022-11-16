@@ -33,7 +33,7 @@ function HomePage() {
                     <Whoarewe />
                     <div id="text">
                         <h1 className="text">Who are we?</h1>
-                        <p className="text">EESA (Electrical Engineering Students Association) is a community that encourages and supports Electrical Engineering students. It  stands with an aim to
+                        <p className="text">TESLA (Technical Electrical Society For Learning And Application) is a community that encourages and supports Electrical Engineering students. It  stands with an aim to
                             provide a platform for Electrical Engineering students to socialise with their peers and to encourage a feeling of community in the electrical engineering stream.</p>
                     </div>
                 </div>
@@ -52,8 +52,8 @@ function HomePage() {
                 <div className="about">
                     <EESAFolio/>
                     <div id="text">
-                        <h1 className="text">EESA Folio</h1>
-                        <p className="text">Portfolio of Electrical Engineers(NIT P) at one place.</p>
+                        <h1 className="text">TESLA Folio</h1>
+                        <p className="text">Portfolio of Electrical Engineers(NITP) at one place.</p>
                         <form className="commingsoon" action="/eesa" method="post">
                             <button>Visit</button>
                         </form>

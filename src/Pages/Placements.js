@@ -1,57 +1,70 @@
-import React,{useEffect, useState, useRef } from 'react'
+// import React,{useEffect, useState, useRef } from 'react'
 
-import { CardInfo } from '../Data/placementcard'
-import Navbar from './../Components/Navbar'
+// import { CardInfo } from '../Data/placementcard'
+// import Navbar from './../Components/Navbar'
+// import './placement.css'
+// const Placements = () => {
+//     let [review, setReview] = useState('');
+//     let [isOpen, setIsOpen] = useState(false);
 
-const Placements = () => {
-    let [review, setReview] = useState('');
-    let [isOpen, setIsOpen] = useState(false);
+//         let modal = null;
+//         if(isOpen) {
+//             modal = (
+//                 <div class='review'>
+//                         <p>{review} </p>
+//                 </div>
+//             )
+//         }
+//     const reviewSet = (i) => {
+//         setReview(i);
+//         setIsOpen(true);
+//     }
+//     let revRef = useRef();
 
-        let modal = null;
-        if(isOpen) {
-            modal = (
-                <div class='review'>
-                        <p>{review} </p>
-                </div>
-            )
-        }
-    const reviewSet = (i) => {
-        setReview(i);
-        setIsOpen(true);
-    }
-    let revRef = useRef();
+//     useEffect(() => {
+//         let handler = (event) => {
+//             if(!revRef.current.contains(event.target)) {
+//                 setIsOpen(false);
+//             }
+//         }
 
-    useEffect(() => {
-        let handler = (event) => {
-            if(!revRef.current.contains(event.target)) {
-                setIsOpen(false);
-            }
-        }
+//         document.addEventListener("mousedown", handler);
 
-        document.addEventListener("mousedown", handler);
+//         return () => {
+//             document.removeEventListener("mousedown", handler);
+//         }
+//     })
+//     return (
+//         <div>
+//             <Navbar />
+//             <div class='activity' >
+//                 <div class='activities'>
+//                     {CardInfo.map((current_elem, ind) => {
 
-        return () => {
-            document.removeEventListener("mousedown", handler);
-        }
-    })
-    return (
-        <div>
-            <Navbar />
-            <div class='activity' >
-                <div class='activities'>
-                    {CardInfo.map((i, j) => {
-                        return (
-                            <div ref={revRef} key={j} className="container" onClick={() => reviewSet(i.review)}>
-                                <img src={i.pic} alt="pic" />
-                                <h1>{i.name}</h1>
-                                <p id="description">{i.company}</p>
-                            </div>)
-                    })}
-                </div>
-                {modal}
-            </div>
-        </div>
-    )
-}
+//                         if(ind==0)
+//                         {
+//                             return (
+//                             <div ref={revRef} key={ind}  onClick={() => reviewSet(current_elem.review)}  className="container" style={{ gridColumnStart:"1",gridColumnEnd:"-1" }}>
+//                                 <img src={current_elem.pic} alt="pic" />
+//                                 <h1>{current_elem.name}</h1>
+//                                 <p id="description">{current_elem.company}</p>
+//                             </div>
+//                             );
+//                         }
 
-export default Placements;
+
+//                         return (
+//                             <div ref={revRef} key={ind} className="container" onClick={() => reviewSet(current_elem.review)}>
+//                                 <img src={current_elem.pic} alt="pic" />
+//                                 <h1>{current_elem.name}</h1>
+//                                 <p id="description">{current_elem.company}</p>
+//                             </div>)
+//                     })}
+//                 </div>
+//                 {modal}
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default Placements;

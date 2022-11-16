@@ -9,15 +9,17 @@ import './Navbar.css'
 function Navbar() {
     return (
         <nav>
-                <div className="logo">
+                <div className="logo" >
+                    <NavLink style={{textDecoration: 'none', color: 'white'}} to='/'>
                     <Logo />
+                    </NavLink>
                 </div>
                 <ul className="nav-links">
                     <li>
                         <NavLink style={{textDecoration: 'none', color: 'white'}} to='/'>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink style={{textDecoration: 'none', color: 'white'}} to='/placements'>Placements</NavLink>
+                        <NavLink style={{textDecoration: 'none', color: 'white'}} to='/team'>Team</NavLink>
                     </li>
                     <li>
                         Internship
